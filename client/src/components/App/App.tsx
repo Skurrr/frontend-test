@@ -1,14 +1,10 @@
 import React from "react";
-import "./App.css";
+import { Link } from "react-router-dom";
+import AppRoutes from "../../routes/AppRoutes";
+import Home from "../Home/Home";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>empty placeholder</p>
-      </header>
-    </div>
-  );
+  return <AppRoutes />;
 }
 
 export default App;
