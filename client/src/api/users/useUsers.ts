@@ -10,7 +10,7 @@ export const useUsers = (
   isError: any;
 } => {
   const { data, error } = useSWR<UserDto[]>(
-    `${URL.LOCAL_HOST}${URL.USERS_API}?_page=${index}`
+    `${URL.LOCAL_HOST}${URL.USERS_API}?_page=${index}&_limit=20`
   );
 
   return {
