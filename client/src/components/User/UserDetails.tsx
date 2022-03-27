@@ -18,6 +18,8 @@ const ViewUserDetails = () => {
   if (isError) {
     return <div>Error</div>;
   }
+
+  // TODO: move user address and user basic info to separate components, use composition
   return (
     <div className="UserDetails--container">
       <div className="UserDetails--image">
