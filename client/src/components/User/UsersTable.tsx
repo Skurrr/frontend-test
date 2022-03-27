@@ -63,7 +63,7 @@ export default function UsersTable() {
                 <TableCell align="right">
                   <Button
                     onClick={() => {
-                      navigate(`/user/${user.email}`);
+                      navigate(`/users/${user.email}`);
                     }}
                     variant="contained"
                   >
