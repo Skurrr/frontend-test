@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import Home from "../components/Home/Home";
+import Home from "../components/Home";
 
 const HomeRoutes = () => {
   return (
