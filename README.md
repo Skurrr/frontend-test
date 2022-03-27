@@ -10,5 +10,5 @@ See: [How to start backend api](https://github.com/Skurrr/frontend-test/blob/mai
 
 ## How to start frontend app
 
-
+See: [Client readme](https://github.com/Skurrr/frontend-test/blob/main/client/README.md)
 
