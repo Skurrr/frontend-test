@@ -2,17 +2,19 @@ import useSWR from "swr";
 import { UserDto } from "../../dto/UserDto";
 import * as URL from "../url";
 
-export const useUsers = (): {
-  users: UserDto[] | undefined;
+export const useUsers = (
+  index: number
+): {
+  users: UserDto[];
   isLoading: boolean;
   isError: any;
 } => {
   const { data, error } = useSWR<UserDto[]>(
-    `${URL.LOCAL_HOST}${URL.USERS_API}`
+    `${URL.LOCAL_HOST}${URL.USERS_API}?_page=${index}`
   );
 
   return {
-    users: data,
+    users: data ?? [],
     isLoading: !error && !data,
     isError: error,
   };
