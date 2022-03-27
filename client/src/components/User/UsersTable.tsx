@@ -10,6 +10,7 @@ import { useState } from "react";
 import { useUsers } from "../../api/users/useUsers";
 import TableFooter from "@mui/material/TableFooter";
 import TablePagination from "@mui/material/TablePagination";
+import "./UsersTable.css";
 
 export default function UsersTable() {
   const [pageIndex, setPageIndex] = useState(0);
@@ -31,8 +32,10 @@ export default function UsersTable() {
     setPageIndex(newPage);
   };
 
+  // TODO: fix rendering number of items per page for table footer
+  // TODO: add styling
   return (
-    <div className="users-table">
+    <div className="Users-table">
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="users table">
           <TableHead>

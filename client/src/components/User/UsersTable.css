@@ -1,0 +1,10 @@
+.Users-table {
+    position: relative;
+    outline: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    background-color: whitesmoke;
+    max-height: 50em;
+}
