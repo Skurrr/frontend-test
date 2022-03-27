@@ -11,10 +11,13 @@ import { useUsers } from "../../api/users/useUsers";
 import TableFooter from "@mui/material/TableFooter";
 import TablePagination from "@mui/material/TablePagination";
 import "./UsersTable.css";
+import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function UsersTable() {
   const [pageIndex, setPageIndex] = useState(0);
   const { users, isLoading, isError } = useUsers(pageIndex);
+  let navigate = useNavigate();
 
   // TODO: add Loading component
   if (isLoading) {
@@ -43,6 +46,7 @@ export default function UsersTable() {
               <TableCell>Name</TableCell>
               <TableCell align="right">User Name</TableCell>
               <TableCell align="right">Email</TableCell>
+              <TableCell align="right">Actions</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -56,6 +60,16 @@ export default function UsersTable() {
                 </TableCell>
                 <TableCell align="right">{user.username}</TableCell>
                 <TableCell align="right">{user.email}</TableCell>
+                <TableCell align="right">
+                  <Button
+                    onClick={() => {
+                      navigate(`/user/${user.email}`);
+                    }}
+                    variant="contained"
+                  >
+                    Go to detail page
+                  </Button>
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

@@ -1,3 +1,4 @@
+import ViewUserDetails from "./UserDetails";
 import UsersTable from "./UsersTable";
 
-export default UsersTable;
+export { UsersTable, ViewUserDetails };
