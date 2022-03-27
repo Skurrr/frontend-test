@@ -14,7 +14,7 @@ export const useUser = (
   );
 
   return {
-    user: data?.shift() ?? undefined,
+    user: data?.[0] || undefined,
     isLoading: !error && !data,
     isError: error,
   };
